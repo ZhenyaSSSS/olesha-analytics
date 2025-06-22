@@ -223,6 +223,11 @@ export default function SchedulePage() {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
+    // Принудительно скроллим вверх при монтировании компонента
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (!scheduleData || scheduleData.length === 0) {
       console.error('Schedule data is empty or not loaded!');
       setLoading(false);
