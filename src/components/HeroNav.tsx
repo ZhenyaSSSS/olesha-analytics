@@ -25,7 +25,7 @@ export function HeroNav() {
     <div className="container">
       <nav className="flex items-center">
         {routes.map((route) => (
-          <Link key={route.href} href={route.href} passHref>
+          <Link key={route.href} href={route.href} passHref scroll={true}>
             <div
               className={cn(
                 "relative px-4 py-3 transition-colors",

@@ -30,14 +30,14 @@ export function SiteHeader() {
     >
       <div className="container relative flex h-16 items-center">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Link href="/" className="font-bold">
+          <Link href="/" className="font-bold" scroll={true}>
             Olesha Analytics
           </Link>
         </div>
         
         <nav className="ml-auto flex items-center space-x-2">
           {routes.map((route) => (
-            <Link key={route.href} href={route.href} passHref>
+            <Link key={route.href} href={route.href} passHref scroll={true}>
               <div
                 className={cn(
                   "rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
