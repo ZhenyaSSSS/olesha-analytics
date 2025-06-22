@@ -21,7 +21,7 @@ export function CallToAction() {
           Присоединяйся к стримам, чтобы попасть в будущие аналитические отчёты и просто хорошо провести время.
         </p>
         <p className="mb-8 max-w-2xl text-sm text-zinc-400">
-          А&nbsp;ещё загляни в&nbsp;наш <Link href={crossLink} className="underline hover:text-white">{crossText}</Link>, если пропустил&nbsp;— там много интересного!
+          А&nbsp;ещё загляни в&nbsp;наш <Link href={crossLink} scroll={true} className="underline hover:text-white">{crossText}</Link>, если пропустил&nbsp;— там много интересного!
         </p>
         <Button asChild size="lg" className="text-lg font-bold">
            <Link href="https://www.twitch.tv/olesha" target="_blank">
