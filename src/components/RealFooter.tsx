@@ -30,7 +30,7 @@ export function RealFooter() {
           <Twitch className="w-5 h-5" />
           <span>Смотреть на Twitch</span>
         </a>
-        <a href="https://github.com/eugen-s" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+        <a href="https://github.com/ZhenyaSSSS/olesha-analytics" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
           <Github className="w-5 h-5" />
           <span>GitHub</span>
         </a>
