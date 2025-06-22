@@ -25,14 +25,13 @@ import {
   endOfMonth,
   eachDayOfInterval,
   getDay,
-  isToday,
   getMonth,
   getYear,
   setMonth,
-  startOfYear,
   add,
 } from 'date-fns';
 import { ru } from 'date-fns/locale';
+import Image from 'next/image';
 import {
   Clock,
   Users,
@@ -77,7 +76,7 @@ interface Month {
 
 // --- DATA PROCESSING ---
 const streamsByDate: Map<string, Stream> = new Map(
-  scheduleData.map((stream: any) => [format(parseISO(stream.date), 'yyyy-MM-dd'), stream])
+  scheduleData.map((stream: Stream) => [format(parseISO(stream.date), 'yyyy-MM-dd'), stream])
 );
 
 const getViewerColor = (viewers: number) => {
@@ -204,7 +203,7 @@ const StreamDetails = ({ selectedDay, onClose }: { selectedDay: Day | null; onCl
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center h-full text-center py-10">
-            <img src="/images/pepe-hands.png" alt="No streams" className="w-32 h-32 mb-4" onError={(e) => e.currentTarget.src = 'https://static-cdn.jtvnw.net/emoticons/v2/115488/default/dark/3.0'}/>
+            <Image src="/images/pepe-hands.png" alt="No streams" width={128} height={128} className="mb-4" />
             <p className="text-2xl font-bold text-zinc-300">No streams :(</p>
             <p className="text-zinc-500">Время косплеить работягу.</p>
           </div>

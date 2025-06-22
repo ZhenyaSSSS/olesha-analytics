@@ -5,7 +5,6 @@ import { motion, useMotionValue, useTransform } from 'framer-motion';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -27,8 +26,6 @@ const FadeIn = (delay = 0) => ({
     },
   },
 });
-
-const MotionCard = motion(Card);
 
 const Background = () => {
   const mouseX = useMotionValue(0);
@@ -216,7 +213,7 @@ export function Insights() {
 
       <InfoCard title="Что такое 'Кластеры'?">
         <p>
-          Кластерный анализ автоматически находит группы похожих стримов (например, "короткие будничные" или "длинные выходные"), помогая увидеть скрытую структуру в вашем контенте и понять, какие "форматы" у вас есть.
+          Кластерный анализ автоматически находит группы похожих стримов (например, &quot;короткие будничные&quot; или &quot;длинные выходные&quot;), помогая увидеть скрытую структуру в вашем контенте и понять, какие &quot;форматы&quot; у вас есть.
         </p>
       </InfoCard>
 
@@ -224,7 +221,7 @@ export function Insights() {
         title="Just Chatting — <br/>доминатор контента"
         description={
           <p>
-            Стримов в категории "Just Chatting" в несколько раз больше, чем по любой отдельной игре. Тем не менее, на среднее количество зрителей выбор почти не влияет — разница составляет всего <strong className="text-primary">1.2%</strong> в пользу игр, что статистически незначимо.
+            Стримов в категории &quot;Just Chatting&quot; в несколько раз больше, чем по любой отдельной игре. Тем не менее, на среднее количество зрителей выбор почти не влияет — разница составляет всего <strong className="text-primary">1.2%</strong> в пользу игр, что статистически незначимо.
           </p>
         }
         imgSrc="/images/top_games_by_stream_count.png"
@@ -237,23 +234,23 @@ export function Insights() {
         description={
           <>
             <motion.p variants={FadeIn(0.2)}>
-              Анализ выделил 4 основных "архетипа" стримов на основе их характеристик. Это показывает, что у канала есть четкая структура: регулярные стримы для поддержания активности, стримы выходного дня для максимального онлайна и редкие марафоны для роста аудитории.
+              Анализ выделил 4 основных &quot;архетипа&quot; стримов на основе их характеристик. Это показывает, что у канала есть четкая структура: регулярные стримы для поддержания активности, стримы выходного дня для максимального онлайна и редкие марафоны для роста аудитории.
             </motion.p>
             <motion.ul variants={FadeIn(0.4)} className="space-y-4 text-base">
               <FeatureListItem>
                 <span className="inline-block align-middle w-3 h-3 rounded-full bg-cyan-400 mr-2" />
-                <b>"Стандартные будничные" (Сине-голубой, 484 стрима):</b> Основа канала. Проходят в будни, длятся в среднем <strong className="text-primary">5.5 часов</strong>, собирают стабильную, но базовую аудиторию (<strong className="text-primary">~1300</strong> зрителей).
+                <b>&quot;Стандартные будничные&quot; (Сине-голубой, 484 стрима):</b> Основа канала. Проходят в будни, длятся в среднем <strong className="text-primary">5.5 часов</strong>, собирают стабильную, но базовую аудиторию (<strong className="text-primary">~1300</strong> зрителей).
               </FeatureListItem>
               <FeatureListItem>
                 <span className="inline-block align-middle w-3 h-3 rounded-full bg-yellow-400 mr-2" />
-                <b>"Прайм-тайм выходного дня" (Желтый, 326 стримов):</b> Самые популярные. Проходят в выходные, длятся дольше (<strong className="text-primary">~6.5 часов</strong>) и привлекают наибольшее количество зрителей (<strong className="text-primary">~1830</strong>).
+                <b>&quot;Прайм-тайм выходного дня&quot; (Желтый, 326 стримов):</b> Самые популярные. Проходят в выходные, длятся дольше (<strong className="text-primary">~6.5 часов</strong>) и привлекают наибольшее количество зрителей (<strong className="text-primary">~1830</strong>).
               </FeatureListItem>
               <FeatureListItem>
                 <span className="inline-block align-middle w-3 h-3 rounded-full bg-purple-800 mr-2" />
-                <b>"Длинные марафоны" (Темно-фиолетовый, 124 стрима):</b> Редкие, но очень длинные (<strong className="text-primary">11+ часов</strong>). Не всегда собирают пиковый онлайн, но очень эффективно привлекают новых подписчиков (в среднем <strong className="text-primary">+220</strong> за стрим).
+                <b>&quot;Длинные марафоны&quot; (Темно-фиолетовый, 124 стрима):</b> Редкие, но очень длинные (<strong className="text-primary">11+ часов</strong>). Не всегда собирают пиковый онлайн, но очень эффективно привлекают новых подписчиков (в среднем <strong className="text-primary">+220</strong> за стрим).
               </FeatureListItem>
               <FeatureListItem>
-                <b>"Аномальный рост" (1 стрим):</b> Уникальный стрим с аномально высоким приростом подписчиков (<strong className="text-primary">&gt;5000</strong>), выделенный алгоритмом как статистический выброс.
+                <b>&quot;Аномальный рост&quot; (1 стрим):</b> Уникальный стрим с аномально высоким приростом подписчиков (<strong className="text-primary">&gt;5000</strong>), выделенный алгоритмом как статистический выброс.
               </FeatureListItem>
             </motion.ul>
           </>
